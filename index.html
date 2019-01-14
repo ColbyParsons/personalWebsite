@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8" />
+    <title>colbyparsons.me</title>
+    <style>
+        body {
+            margin:0;
+            width: 100%;
+        }
+
+        #bar {
+            background-color: #fff;
+            margin:0;
+            height: 42px;
+            position: fixed;
+            top:0px;
+            left: 0px;
+            width: 100%;
+            z-index: 2;
+            box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11);
+        }
+
+        #header {
+            position: relative;
+            height: 450px;
+            width: 100%;
+            margin:0;
+            padding: 0;
+        }
+        #about {
+            position: relative;
+            height: auto;
+            background-color: #f9f9f9;
+            width: 100%;
+            margin:0;
+            padding: 0;
+        }
+        #education {
+            position: relative;
+            height: auto;
+            width: 100%;
+            margin:0;
+            padding: 0;
+        }
+        #projects {
+            position: relative;
+            height: auto;
+            width:100%;
+            background-color: #f9f9f9;
+            width: 100%;
+            margin:0;
+            margin-top: -40px;
+            padding: 0;
+        }
+        #contact {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            margin:0;
+            padding: 0;
+        }
+
+        #navlist {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+            margin-right: 10%;
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav {
+            display: inline-block;
+            padding: 12px 10px;
+            margin: 0;
+            font-size:18px;
+            font-family: Helvetica;
+            color: #2274A5;
+            cursor:pointer;
+        }
+
+        h1 {
+            display: inline-block;
+            font-family: Helvetica;
+            color: #2274A5;
+            font-size:24px;
+            margin: 0;
+            margin-left:10%;
+            margin-top:6px;
+            font-weight: 200;
+        }
+
+        .subtitle1 {
+            position:relative;
+            top:10px;
+            left:10%;
+            font-family: Helvetica;
+            color: #2274A5;
+            font-size:30px;
+            font-weight: 200;
+            width: fit-content;
+            margin-right: 0px;
+        }
+
+        .subtitle2 {
+            position:relative;
+            top:40px;
+            left:10%;
+            font-family: Helvetica;
+            color: #2274A5;
+            font-size:30px;
+            font-weight: 200;
+            width: fit-content;
+            margin-right: 0px;
+        }
+
+
+
+        #imgHolder {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            z-index: 1;
+            top:150px;
+            left: calc(50% - 150px);
+            text-align: center;
+        }
+
+        #avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            
+        }
+
+        #name {
+            font-family: Helvetica;
+            color: #000;
+            font-size:30px;
+            margin: 0px;
+            font-weight: 200;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        }
+
+        .detail {
+            margin: 0;
+            font-family: Helvetica;
+            margin-bottom: 3px;
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        }
+
+        svg{
+            height: 455px;
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            top:25px;
+        }
+
+        #bio {
+            top: 10px;
+            position: relative;
+            left: 20%;
+            width: 70%;
+            font-family: helvetica;
+            font-size:20px;
+            line-height: 1.6;
+            padding-bottom: 30px;
+            margin-right: 0px;
+        }
+
+        #langs {
+          columns: 2;
+          -webkit-columns: 2;
+          -moz-columns: 2;
+        }
+
+        #courses{
+
+        }
+
+        #courses li, #langs li {
+            font-family: helvetica;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .lTitle{
+            font-family: helvetica;
+            font-size:24px;
+            position: relative;
+            top:10px;
+        }
+
+        #courseHolder {
+            position: relative;
+            display: inline-block;
+            left: 20%;
+            width:35%;
+            top:-34.5px;
+        }
+
+        #langHolder {
+            position: absolute;
+            display: inline-block;
+            left: 55%;
+            width:35%;
+            top:30px;
+        }
+
+        #mail {
+            font-family: helvetica;
+            font-size:24px;
+            color: #000;
+            display: inline-block;
+            margin-left: 5px;
+            text-decoration: underline;
+        }
+        
+        .fa {
+            color: #000;
+            font-size: 34px;
+            display: inline-block;
+        }
+
+        #mailContainer {
+            position: relative;
+            left: 20%;
+            width: fit-content;
+        }
+
+        .projText {
+            font-family: helvetica;
+            font-size:20px;
+            color: #000;
+            width:fit-content;
+            margin: 0;
+            text-decoration: underline;
+        }
+
+    
+
+        .projWrap {
+            display: inline-block;
+            position: relative;
+            height: 50px;
+            width: 350px;
+        }
+
+        #links {
+            position: relative;
+            left:20%;
+            width:80%;
+            padding-bottom: 20px;
+        }
+
+        #projTitle {
+            padding-bottom:30px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <svg></svg>
+        <div id="imgHolder">
+            <img id="avatar" src="https://lh3.googleusercontent.com/Mw0JLLSePCGm3yMwiqJEsU-jW_O0pcuUh-pXyMkdciZCmJMZ1iosRRjljkvhOJWf-9fmPNvqmQKT7VH4AU9azTt0LER0iYIV5gx9GiVvaG3OjiJCibOZwlBfQ8fXOyD3Qimk-M8e6Q=w2400">
+            <h3 id="name">Colby Parsons</h3>
+            <p class="detail">3B Computer Science Student</p>
+            <p class="detail">University of Waterloo</p>
+        </div>
+    </div>
+    <div id="about">
+        <h3 class="subtitle2">About</h3>
+        <div id="bio">
+            <p>I'm a student of the Cheriton School of Computer Science at the University of Waterloo. My interests in computer science span data visualization, algorithms, HCI, concurrency and video games. Additionally I'm an avid learner and I love tackling new and unfamiliar computer science challenges. Currently I work as a full stack developer at Tangam Gaming Systems and I am conducting HCI research at the University of Waterloo.</p>
+            <p>Outside computer science I live a healthy active life. I currently work as a Residence Life Don at the University of Waterloo. During my past 2 school terms I held the position of VP Internal of the Biology Undergraduate Society. Some of my favourite pastimes include cooking, cycling and playing chess.</p>
+        </div>
+    </div>
+    <div id="education">
+        <h3 class="subtitle1">Education</h3>
+        <div id="courseHolder">
+            <p class="lTitle">Recent Courses</p>
+            <ul id="courses">
+                <li>CS350: Operating Systems</li>
+                <li>CS349: User Interfaces</li>
+                <li>CS341: Algorithms</li>
+                <li>CS246: Object-Oriented Software Development</li>
+                <li>CS240: Data Structures and Data Management</li>
+                <li>CO250: Optimization</li>
+                <li>MATH239: Combinatorics</li>
+            </ul>
+        </div>
+        <div id="langHolder">
+            <p class="lTitle">Proficient Languages</p>
+            <ul id="langs">
+                <li>C++</li>
+                <li>C</li>
+                <li>C#</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>Angular</li>
+                <li>Bash</li>
+                <li>MIPS Assembly</li>
+                <li>Racket</li>
+            </ul>
+        </div>
+    </div>
+    <div id="projects">
+        <h3 class="subtitle2" id="projTitle">Recent Projects</h3>
+        <div id="links">
+            <div class="projWrap">
+                <a href="https://bl.ocks.org/ColbyParsons/3bcf4781d59d4ce4eeee8fae1f11dd55">
+                        <p class="projText">Bouncing Point Animation</p>
+                </a>
+            </div>
+            <div class="projWrap">
+                <a href="">
+                        <p class="projText">Wave Animation</p>
+                </a>
+            </div>
+            <div class="projWrap">
+                <a href="https://bl.ocks.org/ColbyParsons/7522a9ade83f26be60d11d6941e93fa3">
+                        <p class="projText">Bar Graph Transitions</p>
+                </a>
+            </div>
+            <div class="projWrap">
+                <a href="">
+                        <p class="projText">Line Graph Transitions</p>
+                </a>
+            </div>
+            <div class="projWrap">
+                <a href="">
+                        <p class="projText">Heap Sort Visualized</p>
+                </a>
+            </div>
+            <div class="projWrap">
+                <a href="">
+                        <p class="projText">Insertion Sort Visualized</p>
+                </a>
+            </div>
+            <div class="projWrap">
+                <a href="">
+                        <p class="projText">Selection Sort Visualized</p>
+                </a>
+            </div>
+            <div class="projWrap">
+                <a href="">
+                        <p class="projText">Bubble Sort Visualized</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <h3 class="subtitle1">Contact</h3>
+        <div id="mailContainer">
+                <a href="mailto: caparson@uwaterloo.ca"><i class="fa fa-envelope"></i></a>
+                <a href="mailto: caparson@uwaterloo.ca"><p id="mail">caparson@uwaterloo.ca</p></a>
+        </div>
+    </div>
+    <div id="bar">
+        <h1>Colby Parsons</h1>
+        <ul id="navlist">
+            <li id="hnav" class="nav">Home</li>
+            <li id="anav" class="nav">About</li>
+            <li id="enav" class="nav">Education</li>
+            <li id="pnav" class="nav">Projects</li>
+            <li id="cnav" class="nav">Contact</li>
+        </ul>
+    </div>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script>
+
+    d3.select("#hnav")
+      .on("click",function(){
+        window.scrollBy({ 
+          top: d3.select("#header").node().getBoundingClientRect().y - 42,
+          left: 0,
+          behavior: 'smooth' 
+        });
+      });
+
+    d3.select("#anav")
+      .on("click",function(){
+        window.scrollBy({ 
+          top: d3.select("#about").node().getBoundingClientRect().y - 42,
+          left: 0, 
+          behavior: 'smooth' 
+        });
+      });
+
+    d3.select("#enav")
+      .on("click",function(){
+        window.scrollBy({ 
+          top: d3.select("#education").node().getBoundingClientRect().y - 42,
+          left: 0, 
+          behavior: 'smooth' 
+        });
+      });
+
+
+    d3.select("#pnav")
+      .on("click",function(){
+        window.scrollBy({ 
+          top: d3.select("#projects").node().getBoundingClientRect().y - 42,
+          left: 0, 
+          behavior: 'smooth' 
+        });
+      })
+
+    d3.select("#cnav")
+      .on("click",function(){
+        window.scrollBy({ 
+          top: d3.select("#contact").node().getBoundingClientRect().y - 42,
+          left: 0, 
+          behavior: 'smooth' 
+        });
+      })
+
+    var title = d3.select("h1");
+
+    var data = [];
+
+    var margin = {"left":0,
+                "right":0,
+                "top":0,
+                "bottom":0};
+
+    var body = d3.select("body");
+    var svg = body.select("svg");
+    var width = svg.node().getBoundingClientRect().width;
+    var height = 455;
+    var speed = 1;
+    var radius = 3;
+    var threshold = Math.pow(100,2);
+
+    var numPoints = 40;
+
+    if(width < 600){
+        numPoints = 20;
+    }
+
+    
+
+
+    for(i = 0; i < numPoints; i++){
+        var angle = Math.random()*2*Math.PI;
+        var x = Math.random()*(width - 2*radius)+radius;
+        var y = Math.random()*(height - 2*radius)+radius;
+        var dx = speed*Math.cos(angle);
+        var dy = speed*Math.sin(angle);
+        var obj = {"x":x,"y":y,"angle":angle,"dx":dx,"dy":dy};
+        data.push(obj)
+    }
+
+    var circles = svg.append("g")
+                     .attr("fill","#2274A5")
+                     .selectAll("circle")
+                     .data(data)
+                     .enter().append("circle")
+                     .attr("cx", d => d.x)
+                     .attr("cy", d => d.y)
+                     .attr("r",radius);
+
+    
+    var lineGroup = svg.append("g");
+
+    const sleep = (milliseconds) => {
+        return new Promise(resolve => setTimeout(resolve, milliseconds))
+    }
+
+    async function loop(timestamp) {
+        var dt = new Date();
+        var startTime = dt.getTime();
+        for(i = 0; i < numPoints; i++){
+            var point = data[i];
+            if(point.x + point.dx + radius > width || point.x + point.dx - radius< 0){
+                point.dx = -point.dx;
+            }
+            if(point.y + point.dy + radius > height || point.y + point.dy - radius < 0){
+                point.dy = -point.dy;
+            }
+            point.y += point.dy;
+            point.x += point.dx;
+        }
+        
+        circles.attr("cx",d => d.x)
+               .attr("cy", d => d.y);
+
+
+        lineGroup.selectAll("line")
+                 .remove();
+
+        for(j = 0; j < numPoints; j++){
+            var point1 = data[j];
+            for(k = j; k < numPoints; k++){
+                if(k ==j) continue;
+                var point2 = data[k];
+                if(Math.pow(point1.x - point2.x,2) + Math.pow(point1.y - point2.y,2) < threshold){
+                    lineGroup.append("line")
+                             .attr("x1",point1.x)
+                             .attr("x2",point2.x)
+                             .attr("y1",point1.y)
+                             .attr("y2",point2.y)
+                             .style("stroke-width",2)
+                             .style("stroke","#2274A5")
+                             .attr("fill", "none");
+
+                }
+            }
+        }
+
+        var et = new Date();
+        var endTime = et.getTime();
+
+        if(et - dt < 16){
+            await sleep(16 - (et- dt));
+        }
+
+
+        window.requestAnimationFrame(loop)
+    }
+
+    function redraw(){
+        width = svg.node().getBoundingClientRect().width;
+        for(i = 0; i < numPoints; i++){
+            if(data[i].x > width){
+                data[i].x = width-3;
+            }
+        }
+        if(width < 750){
+            title.style("display","none");
+        }else{
+            title.style("display","inline-block");
+        }
+    }
+
+    window.addEventListener("resize", redraw);
+
+    window.requestAnimationFrame(loop)
+    
+</script>
+
+</body>
+</html>

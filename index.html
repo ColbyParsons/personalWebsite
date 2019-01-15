@@ -40,7 +40,8 @@
         }
         #education {
             position: relative;
-            height: auto;
+            height: fit-content;
+            overflow: auto;
             width: 100%;
             margin:0;
             padding: 0;
@@ -198,20 +199,24 @@
             top:10px;
         }
 
-        #courseHolder {
+        #eduHolder {
             position: relative;
+            width:70%;
+            left:20%;
+            height: fit-content;
+            top:-45px;
+        }
+
+        #courseHolder {
             display: inline-block;
-            left: 20%;
-            width:35%;
-            top:-34.5px;
+            width:49%;
+            float: left;
         }
 
         #langHolder {
-            position: absolute;
             display: inline-block;
-            left: 55%;
-            width:35%;
-            top:30px;
+            width:49%;
+            float: left;
         }
 
         #mail {
@@ -304,34 +309,36 @@
     </div>
     <div id="education">
         <h3 class="subtitle1">Education</h3>
-        <div id="courseHolder">
-            <p class="lTitle">Recent Courses</p>
-            <ul id="courses">
-                <li>CS350: Operating Systems</li>
-                <li>CS349: User Interfaces</li>
-                <li>CS341: Algorithms</li>
-                <li>CS246: Object-Oriented Software Development</li>
-                <li>CS240: Data Structures and Data Management</li>
-                <li>CO250: Optimization</li>
-                <li>MATH239: Combinatorics</li>
-            </ul>
-        </div>
-        <div id="langHolder">
-            <p class="lTitle">Proficient Languages</p>
-            <ul id="langs">
-                <li>C++</li>
-                <li>C</li>
-                <li>C#</li>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Java</li>
-                <li>Python</li>
-                <li>Angular</li>
-                <li>Bash</li>
-                <li>MIPS Assembly</li>
-                <li>Racket</li>
-            </ul>
+        <div id="eduHolder">
+            <div id="courseHolder">
+                <p class="lTitle">Recent Courses</p>
+                <ul id="courses">
+                    <li>CS350: Operating Systems</li>
+                    <li>CS349: User Interfaces</li>
+                    <li>CS341: Algorithms</li>
+                    <li>CS246: Object-Oriented Software Development</li>
+                    <li>CS240: Data Structures and Data Management</li>
+                    <li>CO250: Optimization</li>
+                    <li>MATH239: Combinatorics</li>
+                </ul>
+            </div>
+            <div id="langHolder">
+                <p class="lTitle">Proficient Languages</p>
+                <ul id="langs">
+                    <li>C++</li>
+                    <li>C</li>
+                    <li>C#</li>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>Angular</li>
+                    <li>Bash</li>
+                    <li>MIPS Assembly</li>
+                    <li>Racket</li>
+                </ul>
+            </div>
         </div>
     </div>
     <div id="projects">

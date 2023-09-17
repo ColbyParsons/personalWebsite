@@ -2,7 +2,8 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="utf-8" />
     <title>Colby Parsons</title>
     <style>
@@ -122,12 +123,12 @@
 
 
         #imgHolder {
-            width: 300px;
+            width: 400px;
             height: 300px;
             position: absolute;
             z-index: 1;
             top:150px;
-            left: calc(50% - 150px);
+            left: calc(50% - 200px);
             text-align: center;
         }
 
@@ -209,8 +210,9 @@
 
         #courseHolder {
             display: inline-block;
-            width:49%;
+            width:48%;
             float: left;
+	    padding-left: 18px;
         }
 
         #langHolder {
@@ -219,12 +221,12 @@
             float: left;
         }
 
-        #mail {
+        .mail {
             font-family: helvetica;
             font-size:24px;
             color: #000;
             display: inline-block;
-            margin-left: 5px;
+            margin: 10px 5px;
             text-decoration: underline;
         }
         
@@ -249,7 +251,31 @@
             text-decoration: underline;
         }
 
-    
+	.panel {
+                border-radius: 4px;
+                border-color: #c9c9c9;
+                border-width: 2px;
+                border-style: solid;
+		padding-left: 5px;
+	}
+
+	.projBlurb {
+    		width: 60%;
+    		margin-bottom: 18px;
+    		left: 20%;
+    		position: relative;	
+	}
+
+   	.eduBlurb {
+		margin-top: 38px;
+	}
+	
+	.panel p {
+		margin: 10px;
+		font-family: helvetica;
+            	font-size: 20px;
+            	line-height: 1.6;
+	}
 
         .projWrap {
             display: inline-block;
@@ -274,7 +300,7 @@
             font-size:35px;
         }
 
-        .fa-github:hover{
+        .envelope:hover{
             color: black;
             font-size:40px;
         }        
@@ -284,6 +310,20 @@
             list-style-position: inside;
         }
 
+	@media (max-width: 873px) {
+	  #courseHolder {
+            display: inline-block;
+            width:100%;
+            float: left;
+          }
+
+          #langHolder {
+            display: inline-block;
+            width:100%;
+            float: left;
+          }	
+	}
+
     </style>
 
 </head>
@@ -291,23 +331,42 @@
     <div id="header">
         <svg></svg>
         <div id="imgHolder">
-            <img id="avatar" src="https://scontent.fykz1-2.fna.fbcdn.net/v/t1.6435-9/69852983_2680750851983844_7237128968749449216_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=2iBNAUbcAyIAX96fk0u&tn=TILrR_mAgv7wwd3M&_nc_ht=scontent.fykz1-2.fna&oh=ccec45ad2e8c89c29d494cb21262e403&oe=61A0BEBF">
+            <img id="avatar" src="https://imgur.com/Oe1f2GE.jpg">
             <h3 id="name">Colby Parsons</h3>
-            <p class="detail">Master's Computer Science Student</p>
+            <p class="detail">Master's of Mathematics in Computer Science</p>
             <p class="detail">University of Waterloo</p>
-        </div>
+	    <a href="mailto: colbyparsons88@gmail.com"><i class="fa fa-envelope envelope"></i></a>
+	    <a href="https://github.com/ColbyParsons"><i class="fa-brands fa-github envelope"></i></a>
+	</div>
     </div>
     <div id="about">
         <h3 class="subtitle2">About</h3>
         <div id="bio">
-            <p>I'm a master's student at the Cheriton School of Computer Science at the University of Waterloo in the programming languages group. My supervisor is Professor Peter Buhr. My interests in computer science include concurrency, programming languages, systems programming and data vizualization. In particular I really enjoy concurrent algorithms and concurrent solutions/implementations, both practical and theoretical. Additionally, I'm an avid learner and love tackling new and unfamiliar computer science challenges.</p>
-            <p>Outside computer science, I live a healthy active life. I am an avid boulderer, both indoors and outdoors, and I run long distance triathlons. Other than athletics I like to spend my time cooking, playing board and video games, and 3D modeling.</p>
+	    <p>
+		I completed my master's degree at the Cheriton School of Computer Science at the University of Waterloo in the Programming Languages Group, under the supervision of <a href="https://plg.uwaterloo.ca/~pabuhr/">Professor Peter Buhr</a>.
+		My master's thesis research explored high level concurrent programming language features, and was completed September 2023.
+		Most of my non-thesis research lies in the areas of concurrency and multi-processing.
+		My interests in computer science include concurrency, programming languages, systems programming and data vizualization; however, this is not an exhaustive list.
+		I'm an avid learner and love tackling new and unfamiliar computer science challenges.
+		Computer science is a rapidly changing field and I firmly believe that the best tool in a software engineer's toolkit is the ability to learn quickly.
+		As such, I consider my strong intuition to be one of my most useful skills, and I am eager to work on new challenging problems.
+	    </p>
+	    <p>
+	    My thesis involved ideating and developing a suite of cutting edge concurrent language features and libraries for C∀, a research language built on top of C. 
+	    Independent from thesis work, I also extended and improved some concurrent features of <a href="https://plg.uwaterloo.ca/usystem/uC++.html">μC++</a>, a C++ based teaching language.
+	    If you are interested in C∀ you can learn about it <a href="https://cforall.uwaterloo.ca/">here</a>.
+	    </p>
+	    <p>
+	    	Outside work, I live an active life.
+		Most of my free time is spent training for <a href="https://www.sportstats.ca/search-results.xhtml?query=colby+parsons">long distance triathlons</a>, cooking, drawing, or reading.
+	    </p>
         </div>
     </div>
     <div id="education">
         <h3 class="subtitle1">Education</h3>
         <div id="eduHolder">
-            <div id="courseHolder">
+            <!--
+	    <div id="courseHolder">
                 <p class="lTitle">Undergrad Courses of Note</p>
                 <ul id="courses">
                     <li>CS499T: Honours Thesis: Formalizing Lock Patterns</li>
@@ -326,60 +385,103 @@
                     <li>CS341: Algorithms</li>
                 </ul>
             </div>
+	-->
             <div id="langHolder">
-                <p class="lTitle">Graduate Courses/Contributions</p>
+		<div class="eduBlurb panel">
+		<p>
+		   Ever since my time at the University of Waterloo I've had an insatiable appetite for computer science content.
+		   Only 8 computer science courses at the 3rd year or above were required for a bachelor's degree in computer science, yet I took 14.
+		   This exposed me to a wide range of subject material and subfields of computer science, which alongside my master's courses provided a breadth of knowledge.
+		</p>
+		</div>
+		<p class="lTitle">Graduate Courses</p>
                 <ul id="courses">
                     <li>CS747: Software Verification Using Proof Assistants</li>
                     <li>CS754: Advanced Distributed Systems</li>
-                    <li>μC++: uMutexLock </li>
+		    <li>CS848: High Recall Information Retrieval</li>
+		    <li>CS854: Experimental Performance Evaluation</li>
+		</ul>
+		<!--
+		<p class="lTitle">Research Contributions</p>
+		<ul id="courses">
+		    <li>μC++: Actor System Improvements</li>
+		    <li>μC++: uMutexLock </li>
+		    <li>μC++: Concurrent barging prevention and detection algorithms</li>
                     <li>C∀: Polymorphic condition variable with wait-morphing</li>
-                    <li>C∀: Various mutex lock flavours, including multiple aquisition, ownership, linear backoff etc.</li>
-                    <li>C∀: Mutex statements for block scoped mutual exclusion (in progress)</li>
-                    <li>C∀: Select statements for multiple concurrency primitves (in progress)</li>
+                    <li>C∀: Various mutex lock flavours, including multiple aquisition, ownership, exponential backoff spinlock etc.</li>
+                    <li>C∀: Mutex statements for block scoped mutual exclusion</li>
+		    <li>C∀: Channels</li>
+                    <li>C∀: Select statements for multiple concurrency primitives (in progress)</li>
                 </ul>
+		-->
             </div>
+	    <div id="courseHolder">
+                <p class="lTitle">Undergrad Courses of Note</p>
+                <ul id="courses">
+                    <li>CS499T: Honours Thesis: Formalizing Lock Patterns</li>
+                    <li>CS488: Intro to Computer Graphics</li>
+                    <li>CO487: Applied Cryptography</li>
+                    <li>CS486: Introduction to AI</li>
+                    <li>CS458: Computer Security and Privacy</li>
+                    <li>CS456: Computer Networks</li>
+                    <li>CS444: Compiler Construction</li>
+                    <li>CS442: Principles of Programming Languages</li>
+                    <li>CS370: Numerical Computation</li>
+                    <li>CS360: Intro to Theory of Computing</li>
+                    <li>CS350: Operating Systems</li>
+                    <li>CS349: User Interfaces</li>
+                    <li>CS343: Concurrent and Parallel Programming</li>
+                    <li>CS341: Algorithms</li>
+                </ul>
+	    </div>
         </div>
     </div>
     <div id="projects">
-        <h3 class="subtitle2" id="projTitle">Vizualization Fun</h3>
+        <h3 class="subtitle2" id="projTitle">Visualization Fun</h3>
+	<div class="panel projBlurb">
+            <p>
+		This is a collection of some web-based visualization projects I made for fun in 2019.
+		To see my other side projects such as my DNN-based song recommender, Blinn-Phong ray tracing shader, and others that also can't be shown in browser please check out <a> my <a href="https://github.com/ColbyParsons">Github</a>.
+            </p>
+        </div>
         <div id="links">
             <div class="projWrap">
-                <a href="https://bl.ocks.org/ColbyParsons/3bcf4781d59d4ce4eeee8fae1f11dd55">
+                <a href="https://colbyparsons.github.io/bouncing_point_animation">
                         <p class="projText">Bouncing Point Animation</p>
                 </a>
             </div>
             <div class="projWrap">
-                <a href="https://bl.ocks.org/ColbyParsons/d5dadad6deb6373a4cc8dfdf57b7891c">
+                <a href="https://colbyparsons.github.io/wave_animation">
                         <p class="projText">Wave Animation</p>
                 </a>
             </div>
             <div class="projWrap">
-                <a href="https://bl.ocks.org/ColbyParsons/7522a9ade83f26be60d11d6941e93fa3">
+                <a href="https://colbyparsons.github.io/d3_bar_graph_transitions">
                         <p class="projText">Bar Graph Transitions</p>
                 </a>
             </div>
             <div class="projWrap">
-                <a href="https://bl.ocks.org/ColbyParsons/e1f7e0c97f08a08c1edca23deabc3950">
+                <a href="https://colbyparsons.github.io/d3_line_graph_transitions">
                         <p class="projText">Line Graph Transitions</p>
                 </a>
             </div>
             <div class="projWrap">
-                <a href="https://bl.ocks.org/ColbyParsons/4ec95bb0b9e6c00f44cfe9dc57608cdf">
+                <a href="https://colbyparsons.github.io/heap_sort_vizualized">
                         <p class="projText">Heap Sort Visualized</p>
                 </a>
             </div>
             <div class="projWrap">
-                <a href="https://bl.ocks.org/ColbyParsons/992a474ee7cffa777522f7e33415fe6d">
+                <a href="https://colbyparsons.github.io/insertion_sort_vizualized">
                         <p class="projText">Insertion Sort Visualized</p>
                 </a>
             </div>
             <div class="projWrap">
-                <a href="https://bl.ocks.org/ColbyParsons/6bf5b3ba93b33dc8f9a65b057427ee1e">
+                <a href="https://colbyparsons.github.io/selection_sort_vizualized">
                         <p class="projText">Selection Sort Visualized</p>
                 </a>
             </div>
             <div class="projWrap">
-                <a href="https://bl.ocks.org/ColbyParsons/08d8750b5de6c7ec4f15ef34a6de6003">
+                <a href="https://colbyparsons.github.io/bubble_sort_vizualized">
                         <p class="projText">Bubble Sort Visualized</p>
                 </a>
             </div>
@@ -388,9 +490,13 @@
     <div id="contact">
         <h3 class="subtitle1">Contact</h3>
         <div id="mailContainer">
-                <a href="mailto: caparson@uwaterloo.ca"><i class="fa fa-envelope"></i></a>
-                <a href="mailto: caparson@uwaterloo.ca"><p id="mail">caparson@uwaterloo.ca</p></a>
+                <a href="mailto: colbyparsons88@gmail.com"><i class="fa fa-envelope"></i></a>
+                <a href="mailto: colbyparsons88@gmail.com"><p class="mail">colbyparsons88@gmail.com</p></a>
         </div>
+	<div id="mailContainer">
+		<a href="https://github.com/ColbyParsons"><i class="fa-brands fa-github"></i></a>
+		<a href="https://github.com/ColbyParsons"><p class="mail">Github</p></a>
+	</div>
     </div>
     <div id="bar">
         <h1>Colby Parsons</h1>
